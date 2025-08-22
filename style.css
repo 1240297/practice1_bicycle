@@ -1,0 +1,148 @@
+/* ヘッダー関係 */
+header {
+    width: 960px;
+    padding: 0 4%;
+    margin: 0 auto;        /* 横中央寄せ */
+    box-sizing: border-box; /* パディング込みで幅計算 */
+    align-items: center;
+    display: flex;
+    justify-content: space-between; /* 左右に分ける */
+    align-items: center;  /* 縦中央に揃える */
+    padding: 10px 20px;
+}
+
+h1.logo {
+    width: 150px;
+}
+
+/* これがあるとロゴがいい感じのサイズになる */
+h1.logo img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* nav 内の ul を Flexbox に */
+.nav-menu {
+    display: flex;        /* 横並びにする */
+    gap: 20px;            /* 各メニューの間隔 */
+    list-style: none;     /* デフォルトの丸いマークを消す */
+    margin: 0;            /* デフォルトの余白をリセット */
+    padding: 0;           /* デフォルトの余白をリセット */
+}
+  
+/* li 内のリンクのスタイル */
+.nav-menu li a {
+    text-decoration: none; /* 下線を消す */
+    color: #666;
+    font-weight: bold;
+}
+
+.header-right {
+    display: flex;
+    gap: 40px;  /* メニュー間のスペース */
+}
+
+.main-container {
+    width: 960px;
+    padding: 0 4%;
+    margin: 0 auto;        /* 横中央寄せ */
+    box-sizing: border-box; /* パディング込みで幅計算 */
+}
+
+.main-img {
+    height: 600px; /* 高さ固定 */
+    margin-left: calc(-50vw + 50%); /* 横中央に広げるテクニック */
+    width: 100vw; /* 全幅 */
+    overflow: hidden;
+    position: relative;
+}
+.main-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 枠いっぱいに表示、縦横比を維持して切り抜く */
+    object-position: center; /* 中央部分を表示 */
+    display: block; 
+}
+
+h2 {
+    display: inline-block;           /* 幅を文字に合わせる */
+    border-bottom: 1px solid #333;  /* 下線の太さ・色 */
+    padding-bottom: 0px;             /* 文字と下線の距離を調整 */
+}
+
+section {
+    display: flex;
+    flex-direction: column;  /* 縦に並べる */
+    align-items: center;     /* 横方向の中央揃え */
+    justify-content: center; /* 高さがあれば縦方向も中央揃え */
+    min-height: 400px;       /* 必要に応じて高さ指定 */
+}
+
+.about-box {
+    display: flex;             /* 横並びにする */
+    align-items: center;       /* 縦を中央揃えにする */
+    gap: 20px;                 /* 画像とテキストの間に余白 */
+}
+
+.about-img {
+    width: 130px;
+    height: 130px;
+}
+.about-img img {
+    width: 100%;
+    border-radius: 50%; /* 丸くする */
+    object-fit: cover;  /* はみ出た部分を切り抜く */
+}
+
+.about-text {
+    display: block;
+}
+
+/* BicycleのulをFlexboxに */
+.bicycle-box {
+    width: 100%;
+    display: flex;        /* 横並びにする */
+    justify-content: space-between; /* 両端揃えにする */
+    align-items: flex-start;       /* 上揃え */
+    gap: 20px;            /* 各メニューの間隔 */
+    list-style: none;     /* デフォルトの丸いマークを消す */
+    margin: 0;            /* デフォルトの余白をリセット */
+    padding: 0;           /* デフォルトの余白をリセット */
+}
+  
+/* li 内のリンクのスタイル */
+.bicycle-box li {
+    display: flex;
+    flex-direction: column;   /* 縦方向に並べる */
+    justify-content: center;  /* 縦方向の中央揃え */
+    align-items: center;      /* 横方向の中央揃え */
+
+}
+
+
+.box-img img {
+    width: 300px;
+}
+
+footer {
+    text-align: center;
+    color: #999;
+    font-size: small;
+}
+
+
+@media screen and (max-width: 600px) {
+    .main-container {
+        width: 100vw;
+    }
+    .about-box {
+        flex-direction: column;   /* 縦方向に並べる */
+    }
+
+    .bicycle-box {
+        flex-direction: column;   /* 縦方向に並べる */
+        align-items: center;       /* 中央揃え */
+    }
+
+}
